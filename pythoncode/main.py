@@ -4,6 +4,7 @@ f = open('py_challange_input.json')
 
 data = json.load(f)
 outcomelist = []
+cnt = 0
 iMatches = 0
 for i in data['Cricket']:
     for j in i['formats']:
@@ -18,5 +19,6 @@ for i in data['Cricket']:
                 outcomeData['livestream_provider'] = l['streaming']['liveStream']['provider']
                 outcomeData['winner'] = l['results']['winner']
             outcomeData["regionName"] = k['name']
+            outcomelist[++cnt] = outcomeData
             print(outcomeData);
 f.close()
