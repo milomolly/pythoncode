@@ -3,7 +3,7 @@ import json
 f = open('py_challange_input.json')
 
 data = json.load(f)
-outcomelist = []
+outcomelist = [1000]
 cnt = 0
 iMatches = 0
 for i in data['Cricket']:
